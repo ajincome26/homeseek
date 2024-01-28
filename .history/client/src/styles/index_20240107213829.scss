@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'reset';
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: #fafafa;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #ccd0d7;
+  border-radius: 50px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type='number'] {
+  appearance: textfield;
+}
+
+.cr-truncate-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
+
+// class tailwind-sort
+.cr-transition {
+  @apply transition-all ease-linear duration-200;
+}
+.cr-hover-text {
+  @apply hover:text-[#977616] transition-colors ease-linear duration-200 cursor-pointer;
+}
+.cr-input-text {
+  @apply px-3 py-1 border-[2px] border-[#a0c7d6] outline-none rounded-md focus:border-[#4b5fc2] cr-transition box-border w-full;
+}
